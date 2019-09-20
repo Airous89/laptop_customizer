@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 
 class Cart extends Component{
   render (){
-    const Cart = Object.keys(this.props.selectedOption)
-    .reduce((acc, curr) => acc + this.state.selected[curr].cost,0);
+    const Cart = Object.keys(this.props.selected)
+    .reduce((acc, curr) => acc + this.props.selected[curr].cost,0);
     const TotalCost = Object.keys(this.props.selected)
     .map(key =>  <div className="summary__option" key={key}>
       <div className="summary__option__label">{key}</div>
