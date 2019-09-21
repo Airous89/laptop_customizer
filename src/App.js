@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Head from './Components/Head'
-import './App.css'
-import customOptions from './Components/customOptions'
-import Cart from './Components/Cart'
+import Head from './header/head';
+import './style.css'
+import Custom from './components/custom'
+import Cart from './components/cart'
 
 
 class App extends Component {
@@ -81,9 +81,9 @@ class App extends Component {
   render(){
     return(
       <div className="Apps">
-        <header/>
+        <Head/>
         <main>
-          <customOptions updateFeature={((feature,newValue) => this.updateFeature(feature,newValue))}
+          <Custom updateFeature={((feature,newValue) => this.updateFeature(feature,newValue))}
           selected={this.state.selected} features={this.state.features}/>
           <Cart selected={this.state.selected}/>
         </main>
